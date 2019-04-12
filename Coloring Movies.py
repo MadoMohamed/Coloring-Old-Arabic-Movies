@@ -51,7 +51,7 @@ epochs = 20
 
 
 model = Sequential()
-model.add(BatchNormalization(input_shape=(256,256,1)))
+model.add(BatchNormalization(input_shape=X_train.shape[1:]))
 #encoder part
 model.add(Conv2D(64,(4,4),padding='same',strides=(1,1),name='conv1'))
 model.add(LeakyReLU(alpha=0.2))
